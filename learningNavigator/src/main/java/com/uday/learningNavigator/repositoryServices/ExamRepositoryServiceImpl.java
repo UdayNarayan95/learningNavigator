@@ -41,8 +41,7 @@ public class ExamRepositoryServiceImpl implements IExamRepositoryService{
 
         exam.setSubject(subject);
         ExamDto examDto = modelMapper.map(examRepository.save(exam), ExamDto.class);
-        return examDto;
-       
+        return examDto;  
     }
 
     @Override

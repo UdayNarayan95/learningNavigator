@@ -7,7 +7,7 @@ import com.uday.learningNavigator.exceptions.ExamNotFoundException;
 import com.uday.learningNavigator.exceptions.StudentNotFoundException;
 import com.uday.learningNavigator.exceptions.SubjectNotEnrolledInException;
 import com.uday.learningNavigator.exceptions.SubjectNotFoundException;
-import com.uday.learningNavigator.models.Student;
+
 
 public interface IStudentRepositoryService {
 

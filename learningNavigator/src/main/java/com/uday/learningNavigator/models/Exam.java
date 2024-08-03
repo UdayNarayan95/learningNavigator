@@ -2,6 +2,7 @@ package com.uday.learningNavigator.models;
 import java.util.*;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -14,6 +15,7 @@ import jakarta.persistence.Table;
 @Data
 @Entity
 @Table(name="exams")
+@EqualsAndHashCode(exclude="enrolledStudents")
 public class Exam {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

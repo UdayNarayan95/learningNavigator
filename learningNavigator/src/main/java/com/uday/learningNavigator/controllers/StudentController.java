@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.uday.learningNavigator.dtos.StudentDto;
 import com.uday.learningNavigator.exceptions.ExamNotFoundException;
 import com.uday.learningNavigator.exceptions.StudentNotFoundException;
+import com.uday.learningNavigator.exceptions.SubjectNotEnrolledInException;
 import com.uday.learningNavigator.exceptions.SubjectNotFoundException;
 import com.uday.learningNavigator.exchanges.GetAllStudentsResponse;
 import com.uday.learningNavigator.exchanges.RegisterStudentRequest;
@@ -51,7 +52,7 @@ public class StudentController {
     }
 
     @PutMapping(STUDENT_API_ENDPOINT+"/{studentId}/exam/{examId}")
-    public ResponseEntity<StudentDto> registerStudentForExam(@PathVariable long studentId, @PathVariable long examId) throws StudentNotFoundException, ExamNotFoundException, SubjectNotEnrolledException {
+    public ResponseEntity<StudentDto> registerStudentForExam(@PathVariable long studentId, @PathVariable long examId) throws StudentNotFoundException, ExamNotFoundException, SubjectNotEnrolledInException {
         StudentDto student = studentService.registerStudentForExam(studentId, examId);
         return ResponseEntity.ok().body(student);
     }

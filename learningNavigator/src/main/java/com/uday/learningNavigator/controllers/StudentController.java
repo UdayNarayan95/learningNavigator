@@ -19,7 +19,7 @@ import com.uday.learningNavigator.exceptions.SubjectNotEnrolledInException;
 import com.uday.learningNavigator.exceptions.SubjectNotFoundException;
 import com.uday.learningNavigator.exchanges.GetAllStudentsResponse;
 import com.uday.learningNavigator.exchanges.RegisterStudentRequest;
-import com.uday.learningNavigator.models.Student;
+
 import com.uday.learningNavigator.services.IStudentService;
 
 import jakarta.validation.Valid;

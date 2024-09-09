@@ -3,6 +3,7 @@ package com.uday.learningNavigator.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.uday.learningNavigator.dtos.StudentDto;
 import com.uday.learningNavigator.exceptions.ExamNotFoundException;
@@ -13,7 +14,7 @@ import com.uday.learningNavigator.exchanges.RegisterStudentRequest;
 
 import com.uday.learningNavigator.repositoryServices.IStudentRepositoryService;
 
-
+@Service
 public class StudentServiceImpl implements IStudentService{
 
     @Autowired

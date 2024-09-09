@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.uday.learningNavigator.dtos.StudentDto;
 import com.uday.learningNavigator.exceptions.ExamNotFoundException;
@@ -23,6 +24,7 @@ import com.uday.learningNavigator.repositories.SubjectRepository;
 
 import jakarta.inject.Provider;
 
+@Service
 public class StudentRepositoryServiceImpl implements IStudentRepositoryService{
 
     @Autowired

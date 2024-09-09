@@ -53,4 +53,7 @@ public class SubjectController {
         subjectService.deleteSubject(subjectId);
         return ResponseEntity.ok().body(message);
     }
+
+    //TO DO
+    //UpdateSubjectData
 }

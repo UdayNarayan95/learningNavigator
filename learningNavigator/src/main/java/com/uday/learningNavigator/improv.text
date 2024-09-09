@@ -1,0 +1,37 @@
+Edit
+Copy code
+@ControllerAdvice
+public class GlobalExceptionHandler {
+    @ExceptionHandler(StudentNotFoundException.class)
+    ResponseEntity<String> handleStudentNotFoundException(StudentNotFoundException ex) {
+        String message = ex.getMessage();
+        return ResponseEntity.status(404).body(message);
+    }
+
+    @ExceptionHandler(SubjectNotFoundException.class)
+    ResponseEntity<String> handleSubjectNotFoundException(SubjectNotFoundException ex) {
+        String message = ex.getMessage();
+        return ResponseEntity.status(404).body(message);
+    }
+
+It appears you have a basic implementation of a global exception handler in a Spring-based application. This handler catches StudentNotFoundException and SubjectNotFoundException and returns a 404 status with the exception message.
+
+However, the code can be improved for better maintainability and scalability. Here's a refactored version:
+
+java
+Edit
+Copy code
+@ControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler({StudentNotFoundException.class, SubjectNotFoundException.class})
+    ResponseEntity<String> handleNotFoundException(RuntimeException ex) {
+        String message = ex.getMessage();
+        return ResponseEntity.status(404).body(message);
+    }
+}
+In this version, I've combined the two methods into one by passing an array of exception classes to the @ExceptionHandler annotation. I've also changed the method parameter type to RuntimeException to make it more generic.
+
+If you want to handle different types of exceptions differently, you can add more methods with different exception handlers. However, if you want to keep the same behavior for all exceptions, this refactored version should work fine.
+
+Would you like me to elaborate on this or do you have any specific questions about this code?

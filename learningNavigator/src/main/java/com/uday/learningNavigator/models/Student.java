@@ -2,6 +2,7 @@ package com.uday.learningNavigator.models;
 
 import java.util.Set;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -20,7 +21,7 @@ import lombok.EqualsAndHashCode;
 
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "studentId")
     private long studentId;
 
@@ -32,4 +33,9 @@ public class Student {
 
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Exam> enrolledExams;
-}
+    // @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    // private Set<Subject> enrolledSubjects;
+
+    // @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    // private Set<Exam> enrolledExams;
+}   

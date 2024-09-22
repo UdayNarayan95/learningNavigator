@@ -3,7 +3,6 @@ import java.util.*;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;

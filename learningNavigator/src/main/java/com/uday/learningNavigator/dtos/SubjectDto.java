@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.uday.learningNavigator.models.Student;
 
 @Data
 @NoArgsConstructor
@@ -17,4 +18,8 @@ public class SubjectDto {
 
     @JsonIgnore
     private Set<StudentDto> enrolledStudents;
+
+    // @JsonIgnore
+    // private Set<Student> registeredStudents;
+
 }

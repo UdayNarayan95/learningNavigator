@@ -11,3 +11,4 @@ public class LearningNavigatorApplication {
 		SpringApplication.run(LearningNavigatorApplication.class, args);
 	}
 }
+

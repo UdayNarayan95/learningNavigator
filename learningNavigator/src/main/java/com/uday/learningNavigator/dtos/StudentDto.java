@@ -8,10 +8,10 @@ import java.util.Set;
 
 @Data
 @NoArgsConstructor
-@EqualsAndHashCode(exclude={"enrolledSubjects","registeredExams"})
+@EqualsAndHashCode(exclude={"enrolledSubjects","enrolledExams"})
 public class StudentDto {
     private long id;
     private String name;
     private Set<SubjectDto> enrolledSubjects;
-    private Set< ExamDto> registeredExams;
+    private Set< ExamDto> enrolledExams;
 }

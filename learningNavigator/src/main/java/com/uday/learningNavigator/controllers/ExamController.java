@@ -32,10 +32,18 @@ public class ExamController {
 
     @PostMapping
     public ResponseEntity<ExamDto> createExam(@Valid @RequestBody CreateExamRequest createExamRequest) throws SubjectNotFoundException {
+        System.out.println(createExamRequest.getSubjectId());
         ExamDto exam = examService.createExam(createExamRequest);
+       
         //return ResponseEntity.ok().body(exam);
         return ResponseEntity.status(HttpStatus.CREATED).body(exam);
+
+        // log.info("CreateExamRequest: {}", createExamRequest);
+        // ExamDto exam = examService.createExam(createExamRequest);
+        // log.info("ExamDto: {}", exam);
+        // return ResponseEntity.status(HttpStatus.CREATED).body(exam);
     }
+    
 
     @GetMapping("/{examId}")
     public ResponseEntity<ExamDto> getExamById(@PathVariable(value = "examId") long examId) throws ExamNotFoundException {

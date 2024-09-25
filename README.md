@@ -4,9 +4,9 @@ A Spring Boot-based RESTful API for managing exam enrollments in a Learning Mana
 
 ## Features
 
-**CRUD Operations**: Manage Students, Subjects, and Exams.
-**Enrollment Rules**: Enroll students in exams only after enrolling in related subjects.
-**Global Exception Handling**: Centralized error management via @ControllerAdvice.
+- **CRUD Operations**: Manage Students, Subjects, and Exams.
+- **Enrollment Rules**: Enroll students in exams only after enrolling in related subjects.
+- **Global Exception Handling**: Centralized error management via @ControllerAdvice.
 
 ## Installation and Usage
 ### Prerequisites
